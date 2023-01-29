@@ -1,0 +1,17 @@
+.rules {
+    margin: 0.33em auto 0.8em auto;
+    max-width: 450px;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.rules p {
+    text-align: justify;
+    text-align-last: center;
+    font-size: 0.9em;
+    color: #666;
+}

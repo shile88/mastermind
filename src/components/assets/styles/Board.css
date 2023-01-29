@@ -1,0 +1,9 @@
+.board {
+    margin: 10px auto;
+    max-width: 360px;
+}
+
+.board div {
+    display: inline-block;
+    vertical-align: bottom;
+}

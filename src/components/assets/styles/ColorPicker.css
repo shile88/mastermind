@@ -1,0 +1,38 @@
+.colors .color-holder {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #777;
+    margin-right: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+  } 
+  
+.colors .red {
+    background-color: red;
+  }
+
+.colors .blue {
+    background-color: blue;
+  }
+
+.colors .yellow {
+    background-color: yellow;
+  }
+
+.colors .green {
+    background-color: green;
+  } 
+
+.colors .purple {
+    background-color: purple;
+  }
+
+.colors .pink {
+    background-color: pink;
+  }
+
+.colors .active {
+    border: 2px solid black;
+    border-radius: 21px;
+  }

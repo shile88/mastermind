@@ -1,0 +1,12 @@
+.peg {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #777;
+    margin-right: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: #F0EAED;
+    text-align: center;
+}
+

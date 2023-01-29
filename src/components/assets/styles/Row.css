@@ -1,0 +1,60 @@
+.row {
+    margin: 2px;
+    padding: 5px;
+    display: block;
+    border: 1px solid #d0cacd;
+}
+
+.pegs {
+    margin-left: 5px;
+    margin-bottom: 2px;
+}
+
+.hint {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #777;
+    background-color: #f0eaed;
+    margin: 15px 2px;
+    font-size: 0.75em;
+    padding: 0;
+}
+
+button[disabled] {
+    color: #ccc0c6;
+    cursor: default;
+    background-color: #e2dadd;
+}
+
+button {
+    font-size: 0.9em;
+    padding: 16px 0;
+    color: #33aa88;
+    margin-right: 12px;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.active {
+    border: 2px solid #BBAAAA;
+    background-color: #fff9fc;
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+#green {
+    background-color: green;
+}
+
+#white {
+    background-color: white;
+}

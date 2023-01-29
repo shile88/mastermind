@@ -1,0 +1,32 @@
+.msg {
+    margin: 0.5em auto;
+}
+
+.solution p {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.color-holder {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #777;
+    margin-right: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  } 
+
+.solution .color-holder {
+    cursor: default;
+}
+
+.restart {
+    color: #338855;
+    font-size: 1.5em;
+    text-decoration: underline;
+    cursor: pointer;
+    background-color:  #e2dadd;
+}
