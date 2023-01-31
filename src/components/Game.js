@@ -6,10 +6,11 @@ import Endgame from "./Endgame";
 import { Header } from "./Header";
 
 const chooseColor = ["blue", "red", "yellow", "green", "purple", "pink"];
-const secretRow = chooseColor.sort(() => 0.5 - Math.random()).slice(0, 4);
+const colors = [...chooseColor];
+const secretRow = colors.sort(() => 0.5 - Math.random()).slice(0, 4);
 
 export const Game = () => {
-  const [activeColor, setActiveColor] = useState("");
+  const [activeColor, setActiveColor] = useState("blue");
   const [gameStatus, setGameStatus] = useState({ winner: false, loser: false });
   const [activeRow, setActiveRow] = useState(0);
   const [currentRow, setCurrentRow] = useState(["", "", "", ""]);
@@ -32,6 +33,7 @@ export const Game = () => {
         setActiveRow={setActiveRow}
         currentRow={currentRow}
         setCurrentRow={setCurrentRow}
+        gameStatus={gameStatus}
       />
       <Endgame
         gameStatus={gameStatus}

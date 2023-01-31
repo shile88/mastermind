@@ -12,14 +12,14 @@ export const Row = ({
   setActiveRow,
   setGameStatus,
   currentRow,
-  setCurrentRow
+  setCurrentRow,
+  gameStatus,
 }) => {
-  
   const [disabled, setDisabled] = useState(true);
   const [feedback, setFeedback] = useState(["", "", "", ""]);
 
   useEffect(() => {
-    if (currentRow.every((element) => element !== "") && id === activeRow) { 
+    if (currentRow.every((element) => element !== "") && id === activeRow) {
       setDisabled(false);
     }
   }, [currentRow, id, activeRow]);
@@ -33,10 +33,9 @@ export const Row = ({
         newFeedback[i] = "correct";
         currentRow[i] = -1;
         newSecretRow[i] = -1;
-        winner = winner + 1;
-        if(winner === 4) {
-          setGameStatus({winner: true})
-          setDisabled(true);
+        winner++;
+        if (winner === 4) {
+          setGameStatus({ winner: true });
         }
       }
     }
@@ -53,20 +52,19 @@ export const Row = ({
         }
       }
       if (notIncluded) newFeedback[i] = "wrong";
-     
     }
     newFeedback.sort();
     setFeedback(newFeedback);
     setDisabled(true);
-    setCurrentRow(["", "", "", ""])
+    setCurrentRow(["", "", "", ""]);
     setActiveRow(activeRow + 1);
-    if(activeRow === 9) {
-      setGameStatus({loser: true})
+    if (activeRow === 9) {
+      setGameStatus({ loser: true });
     }
   };
 
   return (
-    <div className={`row ${activeRow === id ? "active" : "disabled"}`} >
+    <div className={`row ${activeRow === id && gameStatus.winner !== true ? "active" : "disabled"}`}>
       <div className="pegs">
         {currentRow.map((value, i) => {
           return (

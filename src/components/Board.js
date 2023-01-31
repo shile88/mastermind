@@ -12,6 +12,7 @@ export const Board = ({
   setActiveRow,
   currentRow,
   setCurrentRow,
+  gameStatus,
 }) => {
   let rows = [];
 
@@ -27,6 +28,7 @@ export const Board = ({
         setGameStatus={setGameStatus}
         currentRow={currentRow}
         setCurrentRow={setCurrentRow}
+        gameStatus={gameStatus}
       />
     );
   }
